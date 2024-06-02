@@ -1,4 +1,4 @@
-<?php include './components/footer.php'; ?>
+<?php include 'footer.php'; ?>
 <script src="https://cdn.tailwindcss.com/"></script>
 <script>
   tailwind.config = {
