@@ -1,2 +1,6 @@
 .DS_Store
 .env
+uploads/*.jpeg
+uploads/*.jpg
+uploads/*.png
+uploads/*.gif

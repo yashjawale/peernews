@@ -39,9 +39,13 @@ try {
           <h2 class="text-2xl font-semibold"><?php echo $post['title'] ?></h2>
           <p class="uppercase"><?php echo date("d M Y h:i A", strtotime($post['created_at'])) ?></p>
           <!-- Edit button -->
-          <a href="editarticle.php?id=<?php echo $post['id'] ?>" class="bg-primary text-white text-sm px-4 py-2 rounded-lg hover:opacity-70">Edit</a>
+          <!-- <a href="editarticle.php?id=<?php echo $post['id'] ?>" class="bg-primary text-white text-sm px-4 py-2 rounded-lg hover:opacity-70">Edit</a> -->
           <!-- Delete button -->
-          <button onclick="handleDelete(<?= $post['id'] ?>)" class="bg-red-500 text-white text-sm px-4 py-2 rounded-lg hover:opacity-70">Delete</button>
+          <div class="flex gap-3">
+            <button onclick="handleDelete(<?= $post['id'] ?>)" class="bg-red-500 text-white text-sm px-4 py-2 rounded-lg hover:opacity-70">Delete</button>
+            <!-- View button -->
+            <a target="_blank" href="/peernews/pages/viewarticle.php?id=<?= $post['id'] ?>" class="bg-primary text-white text-sm px-4 py-2 rounded-lg hover:opacity-70">View</a>
+          </div>
         </div>
       <?php endforeach; ?>
 
